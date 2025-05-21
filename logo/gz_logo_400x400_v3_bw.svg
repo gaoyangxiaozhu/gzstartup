@@ -1,0 +1,6 @@
+<!-- v3黑白版: 渐变和填充全部改为黑白灰色 -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#fff"/>
+  <text x="58%" y="68%" text-anchor="middle" font-size="220" font-family="Georgia, serif" fill="#000" font-weight="bold" style="opacity:0.95;">G</text>
+  <text x="38%" y="78%" text-anchor="middle" font-size="220" font-family="Georgia, serif" fill="#888" font-weight="bold" style="opacity:0.8;">Z</text>
+</svg>
