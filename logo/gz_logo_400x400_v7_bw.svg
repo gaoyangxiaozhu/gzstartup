@@ -1,0 +1,75 @@
+<!-- v7黑白版: 所有渐变和填充改为黑白灰色，线条为黑色 -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#fff"/>
+  <!-- Two concentric 32-pearl necklaces, center (210,200), outer r=8, inner r=6, 椭圆项圈效果 -->
+  <g id="pearl-necklaces">
+    <!-- Outer pearls (ellipse, +10px x) -->
+    <circle cx="310.00" cy="200.00" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="307.78" cy="217.65" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="301.31" cy="234.56" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="290.90" cy="249.02" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="276.94" cy="259.51" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="259.99" cy="265.81" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="240.90" cy="267.91" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="220.61" cy="266.01" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="200.00" cy="260.00" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="179.39" cy="266.01" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="159.10" cy="267.91" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="140.01" cy="265.81" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="123.06" cy="259.51" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="109.10" cy="249.02" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="98.69" cy="234.56" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="92.22" cy="217.65" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="90.00" cy="200.00" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="92.22" cy="182.35" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="98.69" cy="165.44" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="109.10" cy="150.98" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="123.06" cy="140.49" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="140.01" cy="134.19" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="159.10" cy="132.09" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="179.39" cy="133.99" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="200.00" cy="140.00" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="220.61" cy="133.99" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="240.90" cy="132.09" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="259.99" cy="134.19" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="276.94" cy="140.49" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="290.90" cy="150.98" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="301.31" cy="165.44" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="307.78" cy="182.35" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+    <!-- Inner pearls (ellipse, +10px x) -->
+    <circle cx="290.00" cy="200.00" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="288.22" cy="212.53" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="282.50" cy="224.45" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="273.12" cy="234.04" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="260.55" cy="241.25" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="245.62" cy="245.81" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="229.45" cy="247.91" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="213.23" cy="247.01" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="197.00" cy="244.00" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="180.77" cy="247.01" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="164.55" cy="247.91" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="148.38" cy="245.81" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="133.45" cy="241.25" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="120.88" cy="234.04" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="111.50" cy="224.45" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="105.78" cy="212.53" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="104.00" cy="200.00" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="105.78" cy="187.47" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="111.50" cy="175.55" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="120.88" cy="165.96" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="133.45" cy="158.75" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="148.38" cy="154.19" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="164.55" cy="152.09" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="180.77" cy="151.19" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="197.00" cy="152.00" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="213.23" cy="151.19" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="229.45" cy="152.09" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="245.62" cy="154.19" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="260.55" cy="158.75" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="273.12" cy="165.96" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="282.50" cy="175.55" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+    <circle cx="288.22" cy="187.47" r="6" fill="#fff" stroke="#000" stroke-width="1"/>
+  </g>
+  <!-- Z&G 水平紧贴排列，字号70，letter-spacing -8，x=197，y=220，确保Z&G在图片中心水平垂直居中 -->
+  <text x="197" y="220" text-anchor="middle" font-size="70" font-family="Georgia, serif" font-weight="bold" fill="#000" letter-spacing="-8">Z&amp;G</text>
+</svg>
