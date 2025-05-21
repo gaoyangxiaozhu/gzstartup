@@ -1,0 +1,91 @@
+<!-- v3.3: Z&G 水平排列，外圈珍珠r=8，内圈珍珠r=6，项圈中心(210,200) -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="pearl6" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fffbe9"/>
+      <stop offset="100%" stop-color="#f7e7f0"/>
+    </radialGradient>
+    <linearGradient id="gold6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9e6b3"/>
+      <stop offset="100%" stop-color="#e6c07b"/>
+    </linearGradient>
+    <linearGradient id="pink6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8d7e5"/>
+      <stop offset="100%" stop-color="#f3b6d3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#pearl6)"/>
+  <!-- Two concentric 32-pearl necklaces, center (210,200), outer r=8, inner r=6, 椭圆项圈效果 -->
+  <g id="pearl-necklaces">
+    <!-- Outer necklace: 椭圆 a=100, b=80, pearl r=8, center (210,200) -->
+    <!-- Inner necklace: 椭圆 a=80, b=64, pearl r=6, center (210,200) -->
+    <!-- Outer pearls (ellipse, +10px x) -->
+    <circle cx="310.00" cy="200.00" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="307.78" cy="217.65" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="301.31" cy="234.56" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="290.90" cy="249.02" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="276.94" cy="259.51" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="259.99" cy="265.81" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="240.90" cy="267.91" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="220.61" cy="266.01" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="200.00" cy="260.00" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="179.39" cy="266.01" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="159.10" cy="267.91" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="140.01" cy="265.81" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="123.06" cy="259.51" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="109.10" cy="249.02" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="98.69" cy="234.56" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="92.22" cy="217.65" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="90.00" cy="200.00" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="92.22" cy="182.35" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="98.69" cy="165.44" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="109.10" cy="150.98" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="123.06" cy="140.49" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="140.01" cy="134.19" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="159.10" cy="132.09" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="179.39" cy="133.99" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="200.00" cy="140.00" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="220.61" cy="133.99" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="240.90" cy="132.09" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="259.99" cy="134.19" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="276.94" cy="140.49" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="290.90" cy="150.98" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="301.31" cy="165.44" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="307.78" cy="182.35" r="8" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <!-- Inner pearls (ellipse, +10px x) -->
+    <circle cx="290.00" cy="200.00" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="288.22" cy="212.53" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="282.50" cy="224.45" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="273.12" cy="234.04" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="260.55" cy="241.25" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="245.62" cy="245.81" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="229.45" cy="247.91" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="213.23" cy="247.01" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="197.00" cy="244.00" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="180.77" cy="247.01" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="164.55" cy="247.91" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="148.38" cy="245.81" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="133.45" cy="241.25" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="120.88" cy="234.04" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="111.50" cy="224.45" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="105.78" cy="212.53" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="104.00" cy="200.00" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="105.78" cy="187.47" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="111.50" cy="175.55" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="120.88" cy="165.96" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="133.45" cy="158.75" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="148.38" cy="154.19" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="164.55" cy="152.09" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="180.77" cy="151.19" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="197.00" cy="152.00" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="213.23" cy="151.19" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="229.45" cy="152.09" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="245.62" cy="154.19" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="260.55" cy="158.75" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="273.12" cy="165.96" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="282.50" cy="175.55" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+    <circle cx="288.22" cy="187.47" r="6" fill="url(#pearl6)" stroke="#e6c07b" stroke-width="1"/>
+  </g>
+  <!-- Z&G 水平紧贴排列，字号70，letter-spacing -8，x=200，y=220，确保Z&G在图片中心水平垂直居中 -->
+  <text x="197" y="220" text-anchor="middle" font-size="70" font-family="Georgia, serif" font-weight="bold" fill="url(#gold6)" letter-spacing="-8">Z&amp;G</text>
+</svg>
