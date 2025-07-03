@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+langchain
+langgraph
+httpx
+pydantic
+python-dotenv
+notion-client
+openai

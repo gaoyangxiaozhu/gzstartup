@@ -1,0 +1,12 @@
+<view class="chat-container">
+  <block wx:for="{{messages}}" wx:key="index">
+    <view class="msg {{item.role}}">
+      <text>{{item.role === 'user' ? '我：' : 'AI：'}}</text>
+      <text>{{item.content}}</text>
+    </view>
+  </block>
+  <view class="input-bar">
+    <input value="{{input}}" bindinput="onInput" placeholder="请输入问题..." />
+    <button bindtap="sendMsg">发送</button>
+  </view>
+</view>

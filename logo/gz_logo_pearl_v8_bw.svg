@@ -1,0 +1,14 @@
+<!-- v3：Z和G大小一致，Z在上层，重合部分Z在前，黑白版 -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#fff"/>
+  <!-- 用text渲染G，右侧竖线用path细化 -->
+  <text x="160" y="61%" text-anchor="middle" font-size="220" font-family="serif" fill="#000" font-weight="normal" style="opacity:0.95;">G</text>
+  <!-- 右侧收口竖线（更细） -->
+  <rect x="245" y="188" width="8" height="80" rx="3" fill="#000" style="opacity:0.95;" />
+  <text x="228" y="77%" text-anchor="middle" font-size="220" font-family="serif" fill="#000" font-weight="normal" style="opacity:0.95;">Z</text>
+  <!-- 遮挡Z下横线两端，使其更短（上移并加宽遮挡） -->
+  <rect x="100" y="375" width="70" height="20" fill="#fff" style="opacity:1;" />
+  <rect x="260" y="375" width="70" height="20" fill="#fff" style="opacity:1;" />
+  <!-- 珍珠圆形 -->
+  <circle cx="248" cy="290" r="22" fill="#fff" stroke="#000" stroke-width="4" style="opacity:0.95;" />
+</svg>

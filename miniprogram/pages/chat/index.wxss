@@ -1,0 +1,7 @@
+.chat-container { padding: 20rpx; }
+.msg { margin: 10rpx 0; }
+.msg.user { text-align: right; color: #333; }
+.msg.assistant { text-align: left; color: #007aff; }
+.input-bar { display: flex; margin-top: 20rpx; }
+.input-bar input { flex: 1; border: 1px solid #eee; border-radius: 8rpx; padding: 10rpx; }
+.input-bar button { margin-left: 10rpx; }
