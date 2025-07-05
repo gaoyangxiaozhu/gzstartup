@@ -15,12 +15,19 @@ setup(
         'langchain>=0.3.26',
         'langgraph>=0.5.0',
         'langchain-openai>=0.3.27',
-        'notion-client>=2.4.0',
+        'langchain-core>=0.3.26',
         'langchain-community>=0.3.26',
-        'faiss-cpu>=1.7.4'
+        'notion-client>=2.4.0',
+        'faiss-cpu>=1.7.4',
+        'httpx>=0.27.0',
+        'python-dotenv>=1.0.0',
+        'openai>=1.0.0',
+        'starlette>=0.38.0',
+        'pytest>=7.0.0',
+        'aiofiles>=23.0.0'
     ],
     package_data={
-        'app': ['config.ini'],
+        'app': ['config.ini', 'data/markdown/*.md'],
     },
     include_package_data=True,
 )

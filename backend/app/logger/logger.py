@@ -31,6 +31,18 @@ def init_monitor_logger() -> logging.Logger:
 
     return monitoring_logger
 
+
+def init_userqa_logger() -> logging.Logger:
+    # config userqa logger.
+    userqa_logger = logging.getLogger('userqa')
+    userqa_logger.setLevel('INFO')
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(threadName)s - %(message)s")
+    userqa_handler.setFormatter(formatter)
+    userqa_logger.addHandler(userqa_handler)
+    userqa_logger.propagate = False
+
+    return userqa_logger
+
 # Log lock to avoid deadlock
 log_lock = threading.Lock()
 
@@ -39,6 +51,11 @@ log_lock = threading.Lock()
 monitor_handler = logging.FileHandler('/var/log/gzpearl_backend_monitor.log') \
     if 'IS_TEST' not in os.environ else logging.StreamHandler(sys.stdout)
 monitor_logger = init_monitor_logger()
+
+# config userqa logger.
+userqa_handler = logging.FileHandler('/var/log/gzpearl_backend_userqa.log') \
+    if 'IS_TEST' not in os.environ else logging.StreamHandler(sys.stdout)
+userqa_logger = init_userqa_logger()
 
 def init_fast_api_logger() -> None:
     # fastapi & uvicorn
@@ -78,6 +95,13 @@ def log_error(message: Any, e: Any = None, gz_log: logging.Logger = logger) -> N
     throwable_str = '' if e is None else traceback.format_exc()
     with log_lock:
         gz_log.error(log_message, exc_info=True)
+
+def log_warn(message: Any, gz_log: logging.Logger = logger) -> None:
+    if logging.WARN < gz_log.getEffectiveLevel():
+        return
+
+    with log_lock:
+        gz_log.warning(_log_template(message, logging.WARN))
 
 def log_info(message: Any, gz_log: logging.Logger = logger) -> None:
     if logging.INFO < gz_log.getEffectiveLevel():

@@ -3,7 +3,7 @@ import os
 from langchain_community.document_loaders import NotionDBLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain.embeddings import AzureOpenAIEmbeddings
+from langchain_openai import AzureOpenAIEmbeddings
 
 import configparser
 

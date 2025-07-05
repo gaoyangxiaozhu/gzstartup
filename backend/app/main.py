@@ -1,24 +1,21 @@
+from functools import wraps
 import app.prefastapi # pylint: disable=W0611
 
 import uuid
-import asyncio
-from functools import wraps, partial
-from fastapi import FastAPI, Request, Response, Query
+
+from fastapi import FastAPI, Request, Response, Query, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Dict, List, Tuple
 from http import HTTPStatus
-from typing import Any, Callable, cast
+from typing import Any, Callable
 
 from .constant.constant import CONTENT_LENGTH
 from .exception.gzpearl_agent_exception import GZPearlBackendException
 from .models.backend_model import JSONResponse, JSONResponseBuilder
 from .logger.logger import monitor_logger, log_error, init_fast_api_logger, log_info
 from .logger.log_context import LogContext
-from .pearl_agent import PearlAIAgent
 from .handler.wechat_handler import WeChatHandler
 from .utils.utils import Watch
-
 
 API_EXECUTE_TIMEOUT = 30.0
 
@@ -153,48 +150,25 @@ async def interceptor(request: Request, call_next: Any) -> Response:
                   f'duration={execution_time:.0f}ms '
                   f'exception={str(e)} ',
                   e=e,
-                  jupyter_log=monitor_logger)
+                  gz_log=monitor_logger)
         raise e
     finally:
         unset_log_context()
 
-
 def log_request_response(
         view_func: Callable[..., Any]) -> Any:
     @wraps(view_func)
-    async def wrapper(*args: Any, **kwargs: Any) -> Any:
-        request: Request = cast(Request,
-                                kwargs.get('request'))  # The first argument is always the request object
+    async def async_wrapper(*args: Any, **kwargs: Any) -> Any:
+        request: Request = kwargs.get('request')
         set_log_context(kwargs, request)
-        loop = asyncio.get_event_loop()
-        func = partial(view_func, *args, **kwargs)
-
-        def _exec() -> Any:
-            # It will be executed in a thread. So we should set thread context first.
-            set_log_context(kwargs, request)
-            ret = func()
-            unset_log_context()
-            return ret
-
-        async def execute_http_request() -> Response:
-            return await asyncio.wait_for(
-                loop.run_in_executor(global_executor(), _exec),
-                timeout=API_EXECUTE_TIMEOUT)
-
-        # lazy init executor to reduce resource usage.
-        from .global_var.global_var import global_executor
         try:
-            return await execute_http_request()
+            return await view_func(*args, **kwargs)
         except Exception as e:
             log_error(f"Request failed due to {str(e)}", e)
-            raise e
-
-    return wrapper
-
-agent = PearlAIAgent()
-
-# Use (user_id, session_id) as key to isolate multiple sessions
-chat_history_dict: Dict[Tuple[str, str], List[dict]] = {}
+            raise
+        finally:
+            unset_log_context()
+    return async_wrapper
 
 class QARequestPayload(BaseModel):
     question: str
@@ -203,16 +177,11 @@ class QARequestPayload(BaseModel):
 
 @app.get("/")
 @log_request_response
-def read_root(request: Request):
-    return {"msg": "Yuerhua - GZ backend running."}
-
-@app.post("/chat/qa")
-@log_request_response
-def chat_qa(request: Request, data: QARequestPayload):
-    answer = WeChatHandler.chat_qa(data, chat_history_dict, agent)
-    return {"answer": answer}
+async def read_root(request: Request):
+    return {"msg": "天天乐优选 - 悦华珍珠欢迎你."}
 
 @app.get("/wechat")
+@log_request_response
 async def wechat_check(
     request: Request, 
     signature: str = Query(...), 
@@ -222,5 +191,12 @@ async def wechat_check(
     return await WeChatHandler.wechat_check(signature, timestamp, nonce, echostr)
 
 @app.post("/wechat")
-async def wechat_msg(request: Request):
-    return await WeChatHandler.wechat_qa(request)
+@log_request_response
+async def wechat_msg(request: Request, background_tasks: BackgroundTasks):
+    return await WeChatHandler.wechat_callback(request, background_tasks)
+
+@app.post("/wechat/legacy")
+@log_request_response
+async def wechat_msg_legacy(request: Request):
+    """Legacy synchronous processing interface (deprecated, kept for compatibility)"""
+    return await WeChatHandler.wechat_qa_legacy(request)

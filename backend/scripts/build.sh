@@ -29,10 +29,4 @@ cd dist
 # shellcheck disable=SC2035
 pip3 install *.whl
 
-cd ..
-rm -rf dist
-rm -rf build
-# shellcheck disable=SC2035
-rm -rf *.egg-info
-
 echo "Build finished. whl in $root_dir/dist"
